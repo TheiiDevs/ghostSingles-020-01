@@ -1,0 +1,1729 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+        }
+
+        .nav{
+           top:0;
+            position:sticky;
+            background-color: #fff;
+            height: 50px;
+            padding-top: 5px;
+           
+        }
+
+        .navImg{
+            width: 30px;
+        }
+
+        .bottom{
+           
+            text-align: center;
+           
+           
+
+        }
+
+        
+
+        .dymanicHed{
+            display: flex;
+            width: 100%;
+            height: 30px;
+            padding-top: 5px;
+          
+        }
+
+        .dymanicHed1{
+            display: none;
+        }
+
+            .dh{
+                width: 50%;
+                text-align: center;
+
+            }
+            #socs{
+                width: 45%;
+                margin-left: 10px; 
+               text-align: center;
+               padding-top: 5px;
+            border-radius: 10px;
+            box-shadow: -5px 1px 1em 1px rgb(202, 197, 197);
+
+            }
+
+             #lits{
+                width: 45%;
+                text-align: center;
+               padding-top: 5px;
+            border-radius: 10px;
+            box-shadow: -5px 1px 1em 1px rgb(202, 197, 197);
+
+            }
+
+        #allsocsDiv{
+            display: none;
+        }
+
+        
+
+        #fom{
+            width: 100%;
+            
+        }
+    
+
+        .imgD{
+           text-align: center;
+
+        }
+
+        .inpdiv{
+            width: 100%; display: none;
+   
+        }
+
+        .inp{
+            width: 80%; height: 30px;
+            border-radius: 5px;
+            border: solid 1pt rgb(93, 166, 250);
+            text-align: center; margin-bottom: 10px;
+        }
+
+        .inpBtn{
+            width: 100%; height: 30px;
+            border-radius: 5px;
+            background-color: rgb(93, 166, 250);
+           border: none; margin-bottom: 10px;
+        }
+
+        .label{  
+          
+            height: 40px;
+            width: 100%;
+
+        }
+
+
+        .btnsDiv{
+            width: 100px;
+            height: 100px;
+            margin-left: 15%;
+           
+        }
+
+        .off{
+            width: 100px;
+            height: 100px;
+            border-radius: 10px;
+            color: gray;
+            border: none;
+            background-color: #fff;
+            box-shadow: -5px 1px 1em 1px rgb(202, 197, 197);
+
+        }
+
+        .offImg{
+            width: 20px;
+        }
+
+        .on{
+            width: 100px;
+            height: 100px;
+            border-radius: 10px;
+            border: none;
+            color: rgb(93, 166, 250);
+            background-color: #fff;
+            box-shadow: -5px 1px 1em 1px rgb(93, 166, 250);
+            display: none;
+        }
+
+        .ons{
+            width: 100px;
+            height: 100px;
+            border-radius: 10px;
+            border: none;
+            color: rgb(250, 93, 132);
+            background-color: #fff;
+            box-shadow: -5px 1px 1em 1px rgb(250, 93, 132);
+            display: none;
+        }
+
+        .lightdiv{
+            display: flex;
+           
+        }
+
+        #all_off{
+            width: 80%; background-color: #fff;
+            height: 100px; border-radius: 10px;
+            border: none; color: gray;
+            box-shadow: -5px 1px 1em 1px gray;
+            margin-top: 10px;
+           
+        }
+
+        .form{
+            width: 50%;
+            text-align: center;
+            padding-left: 20px;
+            padding-right: 20px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            margin-bottom: 15px;
+        }
+
+        label{
+            color: grey;
+        }
+
+        .splashimg{
+            width: 100px;
+        }
+
+        .Simg{
+            text-align: center;
+            margin-top: 200px;
+        }
+
+        .tagdiv{
+            margin-top: 200px;
+            color: gray;
+
+        }
+
+
+
+
+    </style>
+</head>
+<body>
+    <div class="nav">
+
+       <div class="dymanicHed0">
+        <div class="dymanicHed">
+            <div  class="dh">
+                <small style="color: rgb(93, 166, 250);">lights</small>
+            </div>
+            <div  id="lits">
+               <img class="navImg" src="/imgs/next.png" alt="">
+           </div>
+        
+        </div>
+
+       </div>
+       <div class="dymanicHed1">
+        <div class="dymanicHed">
+            <div  id="socs">
+            <img  class="navImg" src="/imgs/back.png" alt="">
+        </div>
+        <div  class="dh">
+            <small style="color: rgb(250, 93, 132);">sockets</small>
+            </div>
+    
+    </div>
+</div>
+
+     
+    </div>
+
+    <div id="errorMsg">
+        <!--error message-->
+    </div>
+
+    <form  id="fom" action="">
+       <div id="allLightsDiv">
+      
+        <div class="lightdiv">
+            <div id="f1" class="form">
+                <div id="btnf1" class="label">
+                    <span id="span1"> click me</span>
+                </div>
+                <div  id="inpdiv1" class="inpdiv">
+                    <input class="inp" type="text" placeholder="chandelier">
+                    <br>
+                    <button  id="inpBtn1" class="inpBtn">submit</button>
+                </div>
+                <div class="btnsDiv">
+                    <button class="off" type='submit' id='relay_1' name='rel_1'><img class="offImg" src="/imgs/off.png" alt=""></button>
+                    <button class="on" type='submit' id='relay_1on' name='rel_1on'><img class="offImg" src="/imgs/on2.png" alt=""></button>
+
+                </div>
+               
+            </div>
+
+            <div  id="f2" class="form">
+                <div id="btnf2" class="label">
+                    <span  id="span2">  click me</span>
+                </div>
+                <div  id="inpdiv2" class="inpdiv">
+                    <input class="inp" type="text" placeholder="chandelier">
+                    <br>
+                    <button  id="inpBtn2" class="inpBtn">submit</button>
+                </div>
+               
+                <div class="btnsDiv">
+                    <button  class="off" type='submit' id='relay_2' name='rel_2'><img class="offImg" src="/imgs/off.png" alt=""></button>
+                    <button  class="on" type='submit' id='relay_2on' name='rel_2on'><img class="offImg" src="/imgs/on2.png" alt=""></button>
+
+                </div>
+               
+            </div>
+
+        </div>
+
+        
+
+         <div class="lightdiv">
+                <div  id="f3" class="form">
+                    <div id="btnf3" class="label">
+                        <span id="span3"> light 3</span>
+                    </div>
+                    <div  id="inpdiv3" class="inpdiv">
+                        <input class="inp" type="text" placeholder="chandelier">
+                        <br>
+                        <button  id="inpBtn3" class="inpBtn">submit</button>
+                    </div>
+
+                    <div class="btnsDiv">
+                        <button  class="off" type='submit' id='relay_3' name='rel_3'><img class="offImg" src="/imgs/off.png" alt=""></button>
+                        <button  class="on" type='submit' id='relay_3on' name='rel_3'><img class="offImg" src="/imgs/on2.png" alt=""></button>
+
+                    </div>
+                   
+                </div>
+                <div  id="f4" class="form">
+                    <div id="btnf4" class="label">
+                        <span id="span4"> light 4</span>
+                    </div>
+                    <div  id="inpdiv4" class="inpdiv">
+                        <input class="inp" type="text" placeholder="chandelier">
+                        <br>
+                        <button  id="inpBtn4" class="inpBtn">submit</button>
+                    </div>
+
+                    <div class="btnsDiv">
+                        <button  class="off" type='submit' id='relay_4' name='rel_4'><img class="offImg" src="/imgs/off.png" alt=""></button>
+                        <button  class="on" type='submit' id='relay_4on' name='rel_4'><img class="offImg" src="/imgs/on2.png" alt=""></button>
+
+                    </div>
+                   
+                </div>
+            </div>
+            
+            <div class="lightdiv">
+                <div  id="f5" class="form">
+                    <div id="btnf5" class="label">
+                        <span id="span5"> light 5</span>
+                    </div>
+                    <div  id="inpdiv5" class="inpdiv">
+                        <input class="inp" type="text" placeholder="chandelier">
+                        <br>
+                        <button  id="inpBtn5" class="inpBtn">submit</button>
+                    </div>
+
+                    <div class="btnsDiv">
+                        <button  class="off" type='submit' id='relay_5' name='rel_5'><img class="offImg" src="/imgs/off.png" alt=""></button>
+                        <button  class="on" type='submit' id='relay_5on' name='rel_5on'><img class="offImg" src="/imgs/on2.png" alt=""></button>
+
+                    </div>
+                   
+                </div>
+                <div  id="f6" class="form">
+                    <div id="btnf6" class="label">
+                        <span id="span6"> light 6</span>
+                    </div>
+                    <div  id="inpdiv6" class="inpdiv">
+                        <input class="inp" type="text" placeholder="chandelier">
+                        <br>
+                        <button  id="inpBtn6" class="inpBtn">submit</button>
+                    </div>
+
+                    <div class="btnsDiv">
+                        <button  class="off" type='submit' id='relay_6' name='rel_6'><img class="offImg" src="/imgs/off.png" alt=""></button>
+                        <button  class="on" type='submit' id='relay_6on' name='rel_6'><img class="offImg" src="/imgs/on2.png" alt=""></button>
+
+                    </div>
+                   
+                </div>
+            </div>
+
+            <div  class="lightdiv">
+                <div  id="f7" class="form">
+                    <div id="btnf7" class="label">
+                        <span id="span7"> light 7</span>
+                    </div>
+                    <div  id="inpdiv7" class="inpdiv">
+                        <input class="inp" type="text" placeholder="chandelier">
+                        <br>
+                        <button  id="inpBtn7" class="inpBtn">submit</button>
+                    </div>
+
+                    <div class="btnsDiv">
+                        <button  class="off" type='submit' id='relay_7' name='rel_7'><img class="offImg" src="/imgs/off.png" alt=""></button>
+                        <button  class="on" type='submit' id='relay_7on' name='rel_7'><img class="offImg" src="/imgs/on2.png" alt=""></button>
+
+                    </div>
+                   
+                </div>
+                <div  id="f8" class="form">
+                    <div id="btnf8" class="label">
+                        <span id="span8"> light 8</span>
+                    </div>
+                    <div  id="inpdiv8" class="inpdiv">
+                        <input class="inp" type="text" placeholder="chandelier">
+                        <br>
+                        <button  id="inpBtn8" class="inpBtn">submit</button>
+                    </div>
+
+                    <div class="btnsDiv">
+                        <button  class="off" type='submit' id='relay_8' name='rel_8'><img class="offImg" src="/imgs/off.png" alt=""></button>
+                        <button  class="on" type='submit' id='relay_8on' name='rel_8on'><img class="offImg" src="/imgs/on2.png" alt=""></button>
+
+                    </div>
+                   
+                </div>
+
+           </div>
+
+            <div class="lightdiv">
+                <div  id="f9" class="form">
+                    <div id="btnf9" class="label">
+                        <span id="span9"> light 9</span>
+                    </div>
+                    <div  id="inpdiv9" class="inpdiv">
+                        <input class="inp" type="text" placeholder="chandelier">
+                        <br>
+                        <button  id="inpBtn9" class="inpBtn">submit</button>
+                    </div>
+
+                    <div class="btnsDiv">
+                        <button  class="off" type='submit' id='relay_9' name='rel_9'><img class="offImg" src="/imgs/off.png" alt=""></button>
+                        <button  class="on" type='submit' id='relay_9on' name='rel_9'><img class="offImg" src="/imgs/on2.png" alt=""></button>
+
+                    </div>
+                  
+                </div>
+                <div  id="f10" class="form">
+                    <div id="btnf10" class="label">
+                        <span id="span10"> light 10</span>
+                    </div>
+                    <div  id="inpdiv10" class="inpdiv">
+                        <input class="inp" type="text" placeholder="chandelier">
+                        <br>
+                        <button  id="inpBtn10" class="inpBtn">submit</button>
+                    </div>
+
+                    <div class="btnsDiv">
+                        <button  class="off" type='submit' id='relay_10' name='rel_10'><img class="offImg" src="/imgs/off.png" alt=""></button>
+                        <button  class="on" type='submit' id='relay_10on' name='rel_10'><img class="offImg" src="/imgs/on2.png" alt=""></button>
+
+                    </div>
+                 
+                </div>
+
+
+            </div>
+
+
+            
+        </div>
+
+       </div>
+
+
+        <!--sockets switches-->
+
+        <div class="sockets">
+
+            <div id="allsocsDiv">
+               
+            <div class="lightdiv">
+                <div  id="f11" class="form">
+                    <div id="btnf11" class="label">
+                        <span id="span11"> socket 1</span>
+                    </div>
+                    <div  id="inpdiv11" class="inpdiv">
+                        <input class="inp" type="text" placeholder="chandelier">
+                        <br>
+                        <button  id="inpBtn11" class="inpBtn">submit</button>
+                    </div>
+
+                    <div class="btnsDiv">
+                        <button  class="off" type='submit' id='relay_11' name='rel_11'><img class="offImg" src="/imgs/off.png" alt=""></button>
+                        <button  class="ons" type='submit' id='relay_11on' name='rel_11'><img class="offImg" src="/imgs/on.png" alt=""></button>
+                      
+
+                    </div>
+                   
+                </div>
+                <div  id="f12" class="form">
+                    <div id="btnf12" class="label">
+                        <span id="span12"> socket 2</span>
+                    </div>
+                    <div  id="inpdiv12" class="inpdiv">
+                        <input class="inp" type="text" placeholder="chandelier">
+                        <br>
+                        <button  id="inpBtn12" class="inpBtn">submit</button>
+                    </div>
+
+                    <div class="btnsDiv">
+                        <button  class="off" type='submit' id='relay_12' name='rel_12'><img class="offImg" src="/imgs/off.png" alt=""></button>
+                        <button  class="ons" type='submit' id='relay_12on' name='rel_12on'><img class="offImg" src="/imgs/on.png" alt=""></button>
+                      
+
+                    </div>
+                   
+                </div>
+
+           </div>
+
+            <div class="lightdiv">
+                <div  id="f13" class="form">
+                    <div id="btnf13" class="label">
+                        <span id="span13"> socket 3</span>
+                    </div>
+                    <div  id="inpdiv13" class="inpdiv">
+                        <input class="inp" type="text" placeholder="chandelier">
+                        <br>
+                        <button  id="inpBtn13" class="inpBtn">submit</button>
+                    </div>
+
+                    <div class="btnsDiv">
+                        <button  class="off" type='submit' id='relay_13' name='rel_13'><img class="offImg" src="/imgs/off.png" alt=""></button>
+                        <button  class="ons" type='submit' id='relay_13on' name='rel_13'><img class="offImg" src="/imgs/on.png" alt=""></button>
+                      
+
+                    </div>
+                    
+                </div>
+                <div  id="f14" class="form">
+                    <div id="btnf14" class="label">
+                        <span id="span14"> socket 4</span>
+                    </div>
+                    <div  id="inpdiv14" class="inpdiv">
+                        <input class="inp" type="text" placeholder="chandelier">
+                        <br>
+                        <button  id="inpBtn14" class="inpBtn">submit</button>
+                    </div>
+
+                    <div class="btnsDiv">
+                        <button  class="off" type='submit' id='relay_14' name='rel_14'><img class="offImg" src="/imgs/off.png" alt=""></button>
+                        <button  class="ons" type='submit' id='relay_14on' name='rel_14'><img class="offImg" src="/imgs/on.png" alt=""></button>
+
+                    </div>
+                   
+                </div>
+
+
+            </div>
+
+            <div class="lightdiv">
+                <div  id="f15" class="form">
+                    <div id="btnf15" class="label">
+                        <span id="span15"> socket 5</span>
+                    </div>
+                    <div  id="inpdiv15" class="inpdiv">
+                        <input class="inp" type="text" placeholder="chandelier">
+                        <br>
+                        <button  id="inpBtn15" class="inpBtn">submit</button>
+                    </div>
+
+                    <div class="btnsDiv">
+                        <button  class="off" type='submit' id='relay_15' name='rel_15'><img class="offImg" src="/imgs/off.png" alt=""></button>
+                        <button  class="ons" type='submit' id='relay_15on' name='rel_15'><img class="offImg" src="/imgs/on.png" alt=""></button>
+                      
+                    </div>
+                   
+                </div>
+                <div  id="f16" class="form">
+                    <div id="btnf16" class="label">
+                        <span id="span16"> socket 6</span>
+                    </div>
+                    <div  id="inpdiv16" class="inpdiv">
+                        <input class="inp" type="text" placeholder="chandelier">
+                        <br>
+                        <button  id="inpBtn16" class="inpBtn">submit</button>
+                    </div>
+
+                    <div class="btnsDiv">
+                        <button  class="off" type='submit' id='relay_16' name='rel_16'><img class="offImg" src="/imgs/off.png" alt=""></button>
+                        <button  class="ons" type='submit' id='relay_16on' name='rel_16on'><img class="offImg" src="/imgs/on.png" alt=""></button>
+                       
+
+                    </div>
+                   
+                </div>
+
+           </div>
+
+            <div class="lightdiv">
+                <div  id="f17" class="form">
+                    <div id="btnf17" class="label">
+                        <span id="span17"> socket 7</span>
+                    </div>
+                    <div  id="inpdiv17" class="inpdiv">
+                        <input class="inp" type="text" placeholder="chandelier">
+                        <br>
+                        <button  id="inpBtn17" class="inpBtn">submit</button>
+                    </div>
+
+                    <div class="btnsDiv">
+                        <button  class="off" type='submit' id='relay_17' name='rel_17'><img class="offImg" src="/imgs/off.png" alt=""></button>
+                        <button  class="ons" type='submit' id='relay_17on' name='rel_17'><img class="offImg" src="/imgs/on.png" alt=""></button>
+                       
+
+                    </div>
+
+                </div>
+                
+                <div  id="f18" class="form">
+                    <div id="btnf18" class="label">
+                        <span id="span18"> socket 8</span>
+                    </div>
+                    <div  id="inpdiv18" class="inpdiv">
+                        <input class="inp" type="text" placeholder="chandelier">
+                        <br>
+                        <button  id="inpBtn18" class="inpBtn">submit</button>
+                    </div>
+
+                    <div class="btnsDiv">
+                        <button  class="off" type='submit' id='relay_18' name='rel_18'><img class="offImg" src="/imgs/off.png" alt=""></button>
+                        <button  class="ons" type='submit' id='relay_18on' name='rel_18'><img class="offImg" src="/imgs/on.png" alt=""></button>
+
+                    </div>
+                   
+                </div>
+
+
+            </div>
+
+            <div class="lightdiv">
+                <div  id="f19" class="form">
+                    <div id="btnf19" class="label">
+                        <span id="span19"> socket 9</span>
+                    </div>
+                    <div  id="inpdiv19" class="inpdiv">
+                        <input class="inp" type="text" placeholder="chandelier">
+                        <br>
+                        <button  id="inpBtn19" class="inpBtn">submit</button>
+                    </div>
+
+                    <div class="btnsDiv">
+                        <button  class="off" type='submit' id='relay_19' name='rel_19'><img class="offImg" src="/imgs/off.png" alt=""></button>
+                        <button  class="ons" type='submit' id='relay_19on' name='rel_19'><img class="offImg" src="/imgs/on.png" alt=""></button>
+
+                    </div>
+                   
+                </div>
+                <div  id="f20" class="form">
+                    <div id="btnf20" class="label">
+                        <span id="span20"> socket 10</span>
+                    </div>
+                    <div  id="inpdiv20" class="inpdiv">
+                        <input class="inp" type="text" placeholder="chandelier">
+                        <br>
+                        <button  id="inpBtn20" class="inpBtn">submit</button>
+                    </div>
+
+                    <div class="btnsDiv">
+                        <button  class="off" type='submit' id='relay_20' name='rel_20'><img class="offImg" src="/imgs/off.png" alt=""></button>
+                        <button  class="ons" type='submit' id='relay_20on' name='rel_20'><img class="offImg" src="/imgs/on.png" alt=""></button>
+                       
+
+                    </div>
+                   
+                </div>
+
+
+            </div>
+
+       
+
+           
+
+        </div>
+
+        <div  class="bottom">
+            <button type='submit' id='all_off' name='all_off'>all off</button>
+        </div>
+        
+    </form>
+
+    <script>
+     const fom= document.getElementById('fom');
+    
+
+const on= document.querySelector('.on');
+const off= document.querySelector('.off');
+
+const allLightsDiv= document.getElementById('allLightsDiv');
+const allsocsDiv= document.getElementById('allsocsDiv');
+
+const dymanicHed= document.querySelector('.dymanicHed0');
+const dymanicHed1= document.querySelector('.dymanicHed1');
+
+const lits= document.getElementById('lits');
+const socs= document.getElementById('socs');
+
+
+lits.addEventListener("click", function(event){
+    allLightsDiv.style.display = "none";
+    dymanicHed.style.display = "none";
+    dymanicHed1.style.display = "block";
+    allsocsDiv.style.display = "block";
+
+ });
+
+ socs.addEventListener("click", function(event){
+    allLightsDiv.style.display = "block";
+    allsocsDiv.style.display = "none";
+    dymanicHed.style.display = "block";
+    dymanicHed1.style.display = "none";
+
+ });
+
+const span1= document.getElementById('span1');
+const span2= document.getElementById('span2');
+const span3= document.getElementById('span3');
+const span4= document.getElementById('span4');
+const span5= document.getElementById('span5');
+const span6= document.getElementById('span6');
+const span7= document.getElementById('span7');
+const span8= document.getElementById('span8');
+const span9= document.getElementById('span9');
+const span10= document.getElementById('span10');
+const span11= document.getElementById('span11');
+const span12= document.getElementById('span12');
+const span13= document.getElementById('span13');
+const span14= document.getElementById('span14');
+const span15= document.getElementById('span15');
+const span16= document.getElementById('span16');
+const span17= document.getElementById('span17');
+const span18= document.getElementById('span18');
+const span19= document.getElementById('span19');
+const span20= document.getElementById('span20');
+
+//off state btns
+const relay_1= document.getElementById('relay_1');
+const relay_2= document.getElementById('relay_2');
+const relay_3= document.getElementById('relay_3');
+const relay_4= document.getElementById('relay_4');
+const relay_5= document.getElementById('relay_5');
+const relay_6= document.getElementById('relay_6');
+const relay_7= document.getElementById('relay_7');
+const relay_8= document.getElementById('relay_8');
+const relay_9= document.getElementById('relay_9');
+const relay_10= document.getElementById('relay_10');
+const all_off= document.getElementById('all_off');
+
+
+
+//lghts on state btns
+const relay_1on= document.getElementById('relay_1on');
+const relay_2on= document.getElementById('relay_2on');
+const relay_3on= document.getElementById('relay_3on');
+const relay_4on= document.getElementById('relay_4on');
+const relay_5on= document.getElementById('relay_5on');
+const relay_6on= document.getElementById('relay_6on');
+const relay_7on= document.getElementById('relay_7on');
+const relay_8on= document.getElementById('relay_8on');
+const relay_9on= document.getElementById('relay_9on');
+const relay_10on= document.getElementById('relay_10on');
+
+
+//socket off state btns
+const relay_11= document.getElementById('relay_11');
+const relay_12= document.getElementById('relay_12');
+const relay_13= document.getElementById('relay_13');
+const relay_14= document.getElementById('relay_14');
+const relay_15= document.getElementById('relay_15');
+const relay_16= document.getElementById('relay_16');
+const relay_17= document.getElementById('relay_17');
+const relay_18= document.getElementById('relay_18');
+const relay_19= document.getElementById('relay_19');
+const relay_20= document.getElementById('relay_20');
+
+//sockets on state btns
+const relay_11on= document.getElementById('relay_11on');
+const relay_12on= document.getElementById('relay_12on');
+const relay_13on= document.getElementById('relay_13on');
+const relay_14on= document.getElementById('relay_14on');
+const relay_15on= document.getElementById('relay_15on');
+const relay_16on= document.getElementById('relay_16on');
+const relay_17on= document.getElementById('relay_17on');
+const relay_18on= document.getElementById('relay_18on');
+const relay_19on= document.getElementById('relay_19on');
+const relay_20on= document.getElementById('relay_20on');
+
+
+//edit btns
+const btnf1= document.getElementById('btnf1');
+const btnf2= document.getElementById('btnf2');
+const btnf3= document.getElementById('btnf3');
+const btnf4= document.getElementById('btnf4');
+const btnf5= document.getElementById('btnf5');
+const btnf6= document.getElementById('btnf6');
+const btnf7= document.getElementById('btnf7');
+const btnf8= document.getElementById('btnf8');
+const btnf9= document.getElementById('btnf9');
+const btnf10= document.getElementById('btnf10');
+const btnf11= document.getElementById('btnf11');
+const btnf12= document.getElementById('btnf12');
+
+const btnf13= document.getElementById('btnf13');
+const btnf14= document.getElementById('btnf14');
+const btnf15= document.getElementById('btnf15');
+const btnf16= document.getElementById('btnf16');
+const btnf17= document.getElementById('btnf17');
+const btnf18= document.getElementById('btnf18');
+const btnf19= document.getElementById('btnf19');
+const btnf20= document.getElementById('btnf20');
+
+
+//edit state divs
+const inpBtn1= document.getElementById('inpBtn1');
+const inpBtn2= document.getElementById('inpBtn2');
+const inpBtn3= document.getElementById('inpBtn3');
+const inpBtn4= document.getElementById('inpBtn4');
+const inpBtn5= document.getElementById('inpBtn5');
+const inpBtn6= document.getElementById('inpBtn6');
+const inpBtn7= document.getElementById('inpBtn7');
+const inpBtn8= document.getElementById('inpBtn8');
+const inpBtn9= document.getElementById('inpBtn9');
+const inpBtn10= document.getElementById('inpBtn10');
+const inpBtn11= document.getElementById('inpBtn11');
+const inpBtn12= document.getElementById('inpBtn12');
+
+const inpBtn13= document.getElementById('inpBtn13');
+const inpBtn14= document.getElementById('inpBtn14');
+const inpBtn15= document.getElementById('inpBtn15');
+const inpBtn16= document.getElementById('inpBtn16');
+const inpBtn17= document.getElementById('inpBtn17');
+const inpBtn18= document.getElementById('inpBtn18');
+const inpBtn19= document.getElementById('inpBtn19');
+const inpBtn20= document.getElementById('inpBtn20');
+
+
+
+//edit state divss
+const f1= document.getElementById('f1');
+const f2= document.getElementById('f2');
+const f3= document.getElementById('f3');
+const f4= document.getElementById('f4');
+const f5= document.getElementById('f5');
+const f6= document.getElementById('f6');
+const f7= document.getElementById('f7');
+const f8= document.getElementById('f8');
+const f9= document.getElementById('f9');
+const f10= document.getElementById('f10');
+const f11= document.getElementById('f11');
+const f12= document.getElementById('f12');
+
+const f13= document.getElementById('f13');
+const f14= document.getElementById('f14');
+const f15= document.getElementById('f15');
+const f16= document.getElementById('f16');
+const f17= document.getElementById('f17');
+const f18= document.getElementById('f18');
+const f19= document.getElementById('f19');
+const f20= document.getElementById('f20');
+
+
+
+//edit divss
+const inpdiv1= document.getElementById('inpdiv1');
+const inpdiv2= document.getElementById('inpdiv2');
+const inpdiv3= document.getElementById('inpdiv3');
+const inpdiv4= document.getElementById('inpdiv4');
+const inpdiv5= document.getElementById('inpdiv5');
+const inpdiv6= document.getElementById('inpdiv6');
+const inpdiv7= document.getElementById('inpdiv7');
+const inpdiv8= document.getElementById('inpdiv8');
+const inpdiv9= document.getElementById('inpdiv9');
+const inpdiv10= document.getElementById('inpdiv10');
+const inpdiv11= document.getElementById('inpdiv11');
+const inpdiv12= document.getElementById('inpdiv12');
+const inpdiv13= document.getElementById('inpdiv13');
+const inpdiv14= document.getElementById('inpdiv14');
+const inpdiv15= document.getElementById('inpdiv15');
+const inpdiv16= document.getElementById('inpdiv16');
+const inpdiv17= document.getElementById('inpdiv17');
+const inpdiv18= document.getElementById('inpdiv18');
+const inpdiv19= document.getElementById('inpdiv19');
+const inpdiv20= document.getElementById('inpdiv20');
+
+fom.addEventListener("click", function(event) {
+ event.preventDefault();
+ });
+
+
+
+ //lights
+
+btnf1.addEventListener("click", function(event){
+    f1.style.border = "solid 1pt rgb(93, 166, 250)";
+    f1.style.borderRadius = "10px";
+    inpdiv1.style.display = "block";
+    span1.style.display = "none";
+             
+
+ });
+
+    inpBtn1.addEventListener("click", function(event){
+    f1.style.border = " none";
+    inpdiv1.style.display = "none";
+    span1.style.display = "block";
+    
+             
+
+        });
+
+
+
+btnf2.addEventListener("click", function(event){
+    f2.style.border = "solid 1pt rgb(93, 166, 250)";
+    f2.style.borderRadius = "10px";
+    inpdiv2.style.display = "block";
+    span2.style.display = "none";
+        
+
+});
+
+            inpBtn2.addEventListener("click", function(event){
+            f2.style.border = " none";
+            inpdiv2.style.display = "none";
+            span2.style.display = "block";
+             
+
+        });
+
+
+ btnf3.addEventListener("click", function(event){
+    f3.style.border = "solid 1pt rgb(93, 166, 250)";
+    f3.style.borderRadius = "10px";
+    inpdiv3.style.display = "block";
+    span3.style.display = "none";
+        
+
+});
+
+
+            inpBtn3.addEventListener("click", function(event){
+            f3.style.border = " none";
+            inpdiv3.style.display = "none";
+            span3.style.display = "block";
+             
+
+        });
+
+    
+
+
+
+ btnf4.addEventListener("click", function(event){
+    f4.style.border = "solid 1pt rgb(93, 166, 250)";
+    f4.style.borderRadius = "10px";
+    inpdiv4.style.display = "block";
+    span4.style.display = "none";
+        
+
+});
+
+            inpBtn4.addEventListener("click", function(event){
+            f4.style.border = " none";
+            inpdiv4.style.display = "none";
+            span4.style.display = "block";
+             
+
+        });
+
+      
+
+btnf5.addEventListener("click", function(event){
+    f5.style.border = "solid 1pt rgb(93, 166, 250)";
+    f5.style.borderRadius = "10px";
+    inpdiv5.style.display = "block";
+    span5.style.display = "none";
+        
+
+});
+
+            inpBtn5.addEventListener("click", function(event){
+            f5.style.border = " none";
+            inpdiv5.style.display = "none";
+            span5.style.display = "block";
+             
+
+        });
+
+        
+
+btnf6.addEventListener("click", function(event){
+    f6.style.border = "solid 1pt rgb(93, 166, 250)";
+    f6.style.borderRadius = "10px";
+    inpdiv6.style.display = "block";
+    span6.style.display = "none";
+        
+
+});
+
+            inpBtn6.addEventListener("click", function(event){
+            f6.style.border = " none";
+            inpdiv6.style.display = "none";
+            span6.style.display = "block";
+             
+
+        });
+
+        
+        
+btnf7.addEventListener("click", function(event){
+    f7.style.border = "solid 1pt rgb(93, 166, 250)";
+    f7.style.borderRadius = "10px";
+    inpdiv7.style.display = "block";
+    span7.style.display = "none";
+        
+
+});
+
+            inpBtn7.addEventListener("click", function(event){
+            f7.style.border = " none";
+            inpdiv7.style.display = "none";
+            span7.style.display = "block";
+             
+
+        });
+
+
+btnf8.addEventListener("click", function(event){
+    f8.style.border = "solid 1pt rgb(93, 166, 250)";
+    f8.style.borderRadius = "10px";
+    inpdiv8.style.display = "block";
+    span8.style.display = "none";
+        
+
+});
+
+            inpBtn8.addEventListener("click", function(event){
+            f8.style.border = " none";
+            inpdiv8.style.display = "none";
+            span8.style.display = "block";
+             
+
+        });
+
+btnf9.addEventListener("click", function(event){
+    f9.style.border = "solid 1pt rgb(93, 166, 250)";
+    f9.style.borderRadius = "10px";
+    inpdiv9.style.display = "block";
+    span9.style.display = "none";
+        
+
+});
+
+            inpBtn9.addEventListener("click", function(event){
+            f9.style.border = " none";
+            inpdiv9.style.display = "none";
+            span9.style.display = "block";
+             
+
+        });
+
+btnf10.addEventListener("click", function(event){
+    f10.style.border = "solid 1pt rgb(93, 166, 250)";
+    f10.style.borderRadius = "10px";
+    inpdiv10.style.display = "block";
+    span10.style.display = "none";
+        
+
+});
+
+            inpBtn10.addEventListener("click", function(event){
+            f10.style.border = " none";
+            inpdiv10.style.display = "none";
+            span10.style.display = "block";
+             
+
+        });
+
+
+//sockets
+
+btnf11.addEventListener("click", function(event){
+    f11.style.border = "solid 1pt rgb(93, 166, 250)";
+    f11.style.borderRadius = "10px";
+    inpdiv11.style.display = "block";
+    span11.style.display = "none";
+             
+
+ });
+
+        inpBtn11.addEventListener("click", function(event){
+        f11.style.border = " none";
+        inpdiv11.style.display = "none";
+        span11.style.display = "block";
+    
+             
+
+        });
+
+        
+
+
+
+btnf12.addEventListener("click", function(event){
+    f12.style.border = "solid 1pt rgb(93, 166, 250)";
+    f12.style.borderRadius = "10px";
+    inpdiv12.style.display = "block";
+    span12.style.display = "none";
+        
+
+});
+
+            inpBtn12.addEventListener("click", function(event){
+            f12.style.border = " none";
+            inpdiv12.style.display = "none";
+            span12.style.display = "block";
+             
+
+        });
+
+
+ btnf13.addEventListener("click", function(event){
+    f13.style.border = "solid 1pt rgb(93, 166, 250)";
+    f13.style.borderRadius = "10px";
+    inpdiv13.style.display = "block";
+    span13.style.display = "none";
+        
+
+});
+
+            inpBtn13.addEventListener("click", function(event){
+            f13.style.border = " none";
+            inpdiv13.style.display = "none";
+            span13.style.display = "block";
+             
+
+        });
+        
+
+ btnf14.addEventListener("click", function(event){
+    f14.style.border = "solid 1pt rgb(93, 166, 250)";
+    f14.style.borderRadius = "10px";
+    inpdiv14.style.display = "block";
+    span14.style.display = "none";
+        
+
+});
+
+            inpBtn14.addEventListener("click", function(event){
+            f14.style.border = " none";
+            inpdiv14.style.display = "none";
+            span14.style.display = "block";
+             
+
+        });
+
+btnf15.addEventListener("click", function(event){
+    f15.style.border = "solid 1pt rgb(93, 166, 250)";
+    f15.style.borderRadius = "10px";
+    inpdiv15.style.display = "block";
+    span15.style.display = "none";
+        
+
+});
+
+            inpBtn15.addEventListener("click", function(event){
+            f15.style.border = " none";
+            inpdiv15.style.display = "none";
+            span15.style.display = "block";
+             
+
+        });
+
+btnf16.addEventListener("click", function(event){
+    f16.style.border = "solid 1pt rgb(93, 166, 250)";
+    f16.style.borderRadius = "10px";
+    inpdiv16.style.display = "block";
+    span16.style.display = "none";
+        
+
+});
+
+            inpBtn16.addEventListener("click", function(event){
+            f16.style.border = " none";
+            inpdiv16.style.display = "none";
+            span16.style.display = "block";
+             
+
+        });
+        
+btnf17.addEventListener("click", function(event){
+    f17.style.border = "solid 1pt rgb(93, 166, 250)";
+    f17.style.borderRadius = "10px";
+    inpdiv17.style.display = "block";
+    span17.style.display = "none";
+        
+
+});
+
+            inpBtn17.addEventListener("click", function(event){
+            f17.style.border = " none";
+            inpdiv17.style.display = "none";
+            span17.style.display = "block";
+             
+
+        });
+
+
+btnf18.addEventListener("click", function(event){
+    f18.style.border = "solid 1pt rgb(93, 166, 250)";
+    f18.style.borderRadius = "10px";
+    inpdiv18.style.display = "block";
+    span18.style.display = "none";
+        
+
+});
+
+            inpBtn18.addEventListener("click", function(event){
+            f18.style.border = " none";
+            inpdiv18.style.display = "none";
+            span18.style.display = "block";
+             
+
+        });
+
+btnf19.addEventListener("click", function(event){
+    f19.style.border = "solid 1pt rgb(93, 166, 250)";
+    f19.style.borderRadius = "10px";
+    inpdiv19.style.display = "block";
+    span19.style.display = "none";
+        
+
+});
+
+            inpBtn19.addEventListener("click", function(event){
+            f19.style.border = " none";
+            inpdiv19.style.display = "none";
+            span19.style.display = "block";
+             
+
+        });
+
+btnf20.addEventListener("click", function(event){
+    f20.style.border = "solid 1pt rgb(93, 166, 250)";
+    f20.style.borderRadius = "10px";
+    inpdiv20.style.display = "block";
+    span20.style.display = "none";
+        
+
+});
+
+            inpBtn20.addEventListener("click", function(event){
+            f20.style.border = " none";
+            inpdiv20.style.display = "none";
+            span20.style.display = "block";
+             
+
+        });
+
+        
+
+
+ relay_1.addEventListener("click", function(event){
+            relay_1on.style.display = "block";
+                relay_1.style.display = "none";
+
+        });
+
+        relay_1on.addEventListener("click", function(event){
+            relay_1on.style.display = "none";
+            relay_1.style.display = "block";
+
+        });
+
+
+        relay_2.addEventListener("click", function(event){
+            relay_2on.style.display = "block";
+                relay_2.style.display = "none";
+
+        });
+
+        relay_2on.addEventListener("click", function(event){
+            relay_2on.style.display = "none";
+            relay_2.style.display = "block";
+
+        });
+
+        relay_3.addEventListener("click", function(event){
+            relay_3on.style.display = "block";
+                relay_3.style.display = "none";
+
+        });
+
+        relay_3on.addEventListener("click", function(event){
+            relay_3on.style.display = "none";
+            relay_3.style.display = "block";
+
+        });
+
+        relay_4.addEventListener("click", function(event){
+            relay_4on.style.display = "block";
+                relay_4.style.display = "none";
+
+        });
+
+        relay_4on.addEventListener("click", function(event){
+            relay_4on.style.display = "none";
+            relay_4.style.display = "block";
+
+        });
+        
+
+        relay_5.addEventListener("click", function(event){
+            relay_5on.style.display = "block";
+                relay_5.style.display = "none";
+
+        });
+
+        relay_5on.addEventListener("click", function(event){
+            relay_5on.style.display = "none";
+            relay_5.style.display = "block";
+
+        });
+        
+        relay_6.addEventListener("click", function(event){
+            relay_6on.style.display = "block";
+                relay_6.style.display = "none";
+
+        });
+
+        relay_6on.addEventListener("click", function(event){
+            relay_6on.style.display = "none";
+            relay_6.style.display = "block";
+
+        });
+
+        relay_7.addEventListener("click", function(event){
+            relay_7on.style.display = "block";
+                relay_7.style.display = "none";
+
+        });
+
+        relay_7on.addEventListener("click", function(event){
+            relay_7on.style.display = "none";
+            relay_7.style.display = "block";
+
+        });
+
+
+        relay_8.addEventListener("click", function(event){
+            relay_8on.style.display = "block";
+                relay_8.style.display = "none";
+
+        });
+
+        relay_8on.addEventListener("click", function(event){
+            relay_8on.style.display = "none";
+            relay_8.style.display = "block";
+
+        });
+
+        relay_9.addEventListener("click", function(event){
+            relay_9on.style.display = "block";
+                relay_9.style.display = "none";
+
+        });
+
+        relay_9on.addEventListener("click", function(event){
+            relay_9on.style.display = "none";
+            relay_9.style.display = "block";
+
+        });
+
+        relay_10.addEventListener("click", function(event){
+            relay_10on.style.display = "block";
+                relay_10.style.display = "none";
+
+        });
+
+        relay_10on.addEventListener("click", function(event){
+            relay_10on.style.display = "none";
+            relay_10.style.display = "block";
+
+        });
+
+
+
+
+//sockets
+
+
+btnf11.addEventListener("click", function(event){
+    f1.style.border = "solid 1pt rgb(93, 166, 250)";
+    f1.style.borderRadius = "10px";
+    inpdiv1.style.display = "block";
+    span1.style.display = "none";
+             
+
+ });
+
+    inpBtn12.addEventListener("click", function(event){
+    f1.style.border = " none";
+    inpdiv1.style.display = "none";
+    span1.style.display = "block";
+    
+             
+
+        });
+
+
+
+btnf2.addEventListener("click", function(event){
+    f2.style.border = "solid 1pt rgb(93, 166, 250)";
+    f2.style.borderRadius = "10px";
+    inpdiv2.style.display = "block";
+    span2.style.display = "none";
+        
+
+});
+
+            inpBtn2.addEventListener("click", function(event){
+            f2.style.border = " none";
+            inpdiv2.style.display = "none";
+             
+
+        });
+
+
+ btnf3.addEventListener("click", function(event){
+    f3.style.border = "solid 1pt rgb(93, 166, 250)";
+    f3.style.borderRadius = "10px";
+    inpdiv3.style.display = "block";
+    span3.style.display = "none";
+        
+
+});
+
+            inpBtn13.addEventListener("click", function(event){
+            f13.style.border = " none";
+            inpdiv13.style.display = "none";
+            span13.style.display = "block";
+             
+
+        });
+
+ btnf14.addEventListener("click", function(event){
+    f14.style.border = "solid 1pt rgb(93, 166, 250)";
+    f14.style.borderRadius = "10px";
+    inpdiv14.style.display = "block";
+    span14.style.display = "none";
+        
+
+});
+
+            inpBtn14.addEventListener("click", function(event){
+            f14.style.border = " none";
+            inpdiv14.style.display = "none";
+            span14.style.display = "block";
+             
+
+        });
+
+btnf15.addEventListener("click", function(event){
+    f15.style.border = "solid 1pt rgb(93, 166, 250)";
+    f15.style.borderRadius = "10px";
+    inpdiv15.style.display = "block";
+    span15.style.display = "none";
+        
+
+});
+
+            inpBtn15.addEventListener("click", function(event){
+            f15.style.border = " none";
+            inpdiv15.style.display = "none";
+            span15.style.display = "block";
+             
+
+        });
+
+btnf16.addEventListener("click", function(event){
+    f16.style.border = "solid 1pt rgb(93, 166, 250)";
+    f16.style.borderRadius = "10px";
+    inpdiv16.style.display = "block";
+    span16.style.display = "none";
+        
+
+});
+
+            inpBtn16.addEventListener("click", function(event){
+            f16.style.border = " none";
+            inpdiv16.style.display = "none";
+            span16.style.display = "block";
+             
+
+        });
+        
+btnf17.addEventListener("click", function(event){
+    f17.style.border = "solid 1pt rgb(93, 166, 250)";
+    f17.style.borderRadius = "10px";
+    inpdiv17.style.display = "block";
+    span17.style.display = "none";
+        
+
+});
+
+            inpBtn17.addEventListener("click", function(event){
+            f17.style.border = " none";
+            inpdiv17.style.display = "none";
+            span17.style.display = "block";
+             
+
+        });
+
+
+btnf18.addEventListener("click", function(event){
+    f18.style.border = "solid 1pt rgb(93, 166, 250)";
+    f18.style.borderRadius = "10px";
+    inpdiv18.style.display = "block";
+    span18.style.display = "none";
+        
+
+});
+
+            inpBtn18.addEventListener("click", function(event){
+            f18.style.border = " none";
+            inpdiv18.style.display = "none";
+            span18.style.display = "block";
+             
+
+        });
+
+btnf19.addEventListener("click", function(event){
+    f19.style.border = "solid 1pt rgb(93, 166, 250)";
+    f19.style.borderRadius = "10px";
+    inpdiv19.style.display = "block";
+    span19.style.display = "none";
+        
+
+});
+
+            inpBtn19.addEventListener("click", function(event){
+            f19.style.border = " none";
+            inpdiv19.style.display = "none";
+            span19.style.display = "block";
+             
+
+        });
+
+btnf20.addEventListener("click", function(event){
+    f20.style.border = "solid 1pt rgb(93, 166, 250)";
+    f20.style.borderRadius = "10px";
+    inpdiv20.style.display = "block";
+    span20.style.display = "none";
+        
+
+});
+
+            inpBtn20.addEventListener("click", function(event){
+            f20.style.border = " none";
+            inpdiv20.style.display = "none";
+            span20.style.display = "block";
+             
+
+        });
+
+ relay_11.addEventListener("click", function(event){
+            relay_11on.style.display = "block";
+                relay_11.style.display = "none";
+
+        });
+
+        relay_11on.addEventListener("click", function(event){
+            relay_11on.style.display = "none";
+            relay_11.style.display = "block";
+
+        });
+
+
+        relay_12.addEventListener("click", function(event){
+            relay_12on.style.display = "block";
+                relay_12.style.display = "none";
+
+        });
+
+        relay_12on.addEventListener("click", function(event){
+            relay_12on.style.display = "none";
+            relay_12.style.display = "block";
+
+        });
+
+        relay_13.addEventListener("click", function(event){
+            relay_13on.style.display = "block";
+                relay_13.style.display = "none";
+
+        });
+
+        relay_13on.addEventListener("click", function(event){
+            relay_13on.style.display = "none";
+            relay_13.style.display = "block";
+
+        });
+
+        relay_14.addEventListener("click", function(event){
+            relay_14on.style.display = "block";
+                relay_14.style.display = "none";
+
+        });
+
+        relay_14on.addEventListener("click", function(event){
+            relay_14on.style.display = "none";
+            relay_14.style.display = "block";
+
+        });
+        
+
+        relay_15.addEventListener("click", function(event){
+            relay_15on.style.display = "block";
+                relay_15.style.display = "none";
+
+        });
+
+        relay_15on.addEventListener("click", function(event){
+            relay_15on.style.display = "none";
+            relay_15.style.display = "block";
+
+        });
+        
+        relay_16.addEventListener("click", function(event){
+            relay_16on.style.display = "block";
+                relay_16.style.display = "none";
+
+        });
+
+        relay_16on.addEventListener("click", function(event){
+            relay_16on.style.display = "none";
+            relay_16.style.display = "block";
+
+        });
+
+        relay_17.addEventListener("click", function(event){
+            relay_17on.style.display = "block";
+                relay_17.style.display = "none";
+
+        });
+
+        relay_17on.addEventListener("click", function(event){
+            relay_17on.style.display = "none";
+            relay_17.style.display = "block";
+
+        });
+
+
+        relay_18.addEventListener("click", function(event){
+            relay_18on.style.display = "block";
+                relay_18.style.display = "none";
+
+        });
+
+        relay_18on.addEventListener("click", function(event){
+            relay_18on.style.display = "none";
+            relay_18.style.display = "block";
+
+        });
+
+        relay_19.addEventListener("click", function(event){
+            relay_19on.style.display = "block";
+                relay_19.style.display = "none";
+
+        });
+
+        relay_19on.addEventListener("click", function(event){
+            relay_19on.style.display = "none";
+            relay_19.style.display = "block";
+
+        });
+
+        relay_20.addEventListener("click", function(event){
+            relay_20on.style.display = "block";
+                relay_20.style.display = "none";
+
+        });
+
+        relay_20on.addEventListener("click", function(event){
+            relay_20on.style.display = "none";
+            relay_20.style.display = "block";
+
+        });
+
+
+        all_off.addEventListener("click", function(event){
+            all_off.style.boxShadow = "-5px 1px 1em 1px red";
+            all_off.style.color="red";
+            setTimeout(()=>{
+                all_off.style.color="gray";
+                all_off.style.boxShadow = "-5px 1px 1em 1px gray";
+            relay_1on.style.display = "none";
+            relay_1.style.display = "block";
+            relay_2on.style.display = "none";
+            relay_2.style.display = "block";
+            relay_3on.style.display = "none";
+            relay_3.style.display = "block";
+            relay_4on.style.display = "none";
+            relay_4.style.display = "block";
+            relay_5on.style.display = "none";
+            relay_5.style.display = "block";
+            relay_6on.style.display = "none";
+            relay_6.style.display = "block";
+            relay_7on.style.display = "none";
+            relay_7.style.display = "block";
+            relay_9on.style.display = "none";
+            relay_9.style.display = "block";
+            relay_8on.style.display = "none";
+            relay_8.style.display = "block";
+            relay_10on.style.display = "none";
+            relay_10.style.display = "block";
+
+            relay_11on.style.display = "none";
+            relay_11.style.display = "block";
+            relay_12on.style.display = "none";
+            relay_12.style.display = "block";
+            relay_13on.style.display = "none";
+            relay_13.style.display = "block";
+            relay_14on.style.display = "none";
+            relay_14.style.display = "block";
+            relay_15on.style.display = "none";
+            relay_15.style.display = "block";
+            relay_16on.style.display = "none";
+            relay_16.style.display = "block";
+            relay_17on.style.display = "none";
+            relay_17.style.display = "block";
+            relay_19on.style.display = "none";
+            relay_19.style.display = "block";
+            relay_18on.style.display = "none";
+            relay_18.style.display = "block";
+            relay_20on.style.display = "none";
+            relay_20.style.display = "block";
+                
+            
+            
+            },1000);
+ 
+
+        });
+
+
+ </script>
+    
+</body>
+</html>
